@@ -1,6 +1,11 @@
 package com.socialbysteph.simmy_backend.Login;
 
-public class User {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class SIMMYUser {
+    @Id
     private String username;
     private String password;
     private String name;
@@ -8,22 +13,22 @@ public class User {
     private String q2;
     private String q3;
 
-    public User(String username, String password) {
+    public SIMMYUser(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public User(String username) {
+    public SIMMYUser(String username) {
         this.username = username;
         this.password = null;
     }
 
-    public User() {
+    public SIMMYUser() {
         this.username = "-1";
         this.password = "-1";
     }
 
-    public User(String username, String password, String name, String q1, String q2, String q3) {
+    public SIMMYUser(String username, String password, String name, String q1, String q2, String q3) {
         this.username = username;
         this.password = password;
         this.name = name;
